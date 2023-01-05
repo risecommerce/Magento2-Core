@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Risecommerce (support@risecommerce.com). All rights reserved.
+ * 
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="risecommerce" sortOrder="110" translate="label" class="risecommerce-tab">
+            <label>Risecommerce Extensions</label>
+        </tab>
+        <section id="rcextension" translate="label" sortOrder="999999" showInDefault="1" showInWebsite="0" showInStore="0">
+            <class>separator-top</class>
+            <label>Extensions &amp; Notifications</label>
+            <tab>risecommerce</tab>
+            <resource>Risecommerce_Core::config_section</resource>
+            <group id="risecommerce_extensions" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Risecommerce Extensions</label>
+                <attribute type="expanded">1</attribute>
+                <field id="extensions_info" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Extensions Info</label>
+                    <frontend_model>Risecommerce\Core\Block\Adminhtml\System\Config\Form\ExtensionsInfo</frontend_model>
+                </field>
+            </group>
+            <group id="notification" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Risecommerce Notifications</label>
+                <attribute type="expanded">1</attribute>
+                <field id="update" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Product Updates</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="offer" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Special Offers</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="news" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>News</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="tip_trick" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Tips &amp; Tricks</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="general" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>General Information</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="menu" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Risecommerce Menu</label>
+                <attribute type="expanded">1</attribute>
+                <field id="display" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Display Risecommerce Menu Item</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Note that, after you save the config you have to flush the Magento cache for this option to be applied.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

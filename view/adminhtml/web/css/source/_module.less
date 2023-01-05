@@ -1,0 +1,81 @@
+.admin__menu {
+    
+    
+
+    // Content
+    [data-ui-id^=menu-magento-].level-0 {
+        [data-ui-id^=menu-risecommerce-].level-1 {
+            .submenu-group-title {
+                span {
+                    display: flex;
+                    justify-content: space-between;
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 20px;
+                        min-width: 20px;
+                        height: 22px;
+                        margin-left: 15px;
+                        vertical-align: middle;
+                        padding: 0;
+                    }
+                }
+            }
+            .submenu-group-title {
+                + .submenu {
+                    [data-ui-id^=menu-risecommerce].level-2 {
+                        span {
+                            &:after {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    [data-ui-id^=menu-magento-].level-0 {
+        [data-ui-id^=menu-magento-].level-1 {
+            [data-ui-id^=menu-risecommerce-].level-2 {
+                span {
+                    display: flex;
+                    justify-content: space-between;
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 20px;
+                        min-width: 20px;
+                        height: 22px;
+                        margin-left: 15px;
+                        vertical-align: middle;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+// Store Configuration Risecommerce Extension
+.config-nav .risecommerce-tab .admin__page-nav-title:before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 11px;
+}
+.config-nav .risecommerce-tab .admin__page-nav-title strong {
+    margin-left: 40px;
+}
+
+.accordion .form-inline .config .data-grid .risecommerce-section td {
+    padding: 1rem;
+}
+.accordion .form-inline .config .risecommerce-section tr:nth-child(even) td {
+    background-color: #f5f5f5;
+}

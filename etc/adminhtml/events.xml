@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Risecommerce (support@risecommerce.com). All rights reserved.
+ * 
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="controller_action_predispatch">
+        <observer name="risecommerce_core_controller_action_predispatch" instance="Risecommerce\Core\Observer\PredispathAdminActionControllerObserver" />
+    </event>
+    <event name="controller_action_predispatch_adminhtml_system_config_save">
+        <observer name="risecommerce_core_controller_action_predispatch_adminhtml_system_config_save" instance="Risecommerce\Core\Observer\ConfigObserver"/>
+    </event>
+</config>
