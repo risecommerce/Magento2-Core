@@ -16,7 +16,7 @@ Method II)
 
 Using Composer 
 
-composer require risecommerce/module-core-extension
+composer require risecommerce/module-core-extension:1.0.1
 
 #Enable Extension:
 - php bin/magento module:enable Risecommerce_Core
